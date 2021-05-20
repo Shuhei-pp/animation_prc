@@ -1,0 +1,13 @@
+
+
+<h1>datadase</h1>
+
+<% @items.each do|item_index|%>
+    <%= item_index.item  %>%   
+    </br>
+<% end %>
+
+<%= form_tag("/home/write")do%>
+    <input type="text" placeholder = "登録したいことを書いてください" id="item_content">
+    <input type ="submit" value = "送信">
+<%end%>
