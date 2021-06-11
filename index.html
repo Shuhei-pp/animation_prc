@@ -1,0 +1,86 @@
+<body>
+
+
+<div style="height: 800px;">
+<p id= "number" >1</p>
+<button onclick="number();">i++</button>
+</div>
+
+<div style="height: 600px;">
+    <div class = "box" id = "anime_test" style ="left:200px;"></div>
+    <button onclick="boxclick();">box!!</button>
+</div>
+
+<div style="height: 600px;">
+    <div class = "stick" id = "anime" style ="width:200px;"></div>
+    <button onclick="stickclick();">stick!!</button>
+</div>
+</body>
+
+<style>
+body{
+    position:absolute; 
+}
+
+.box{
+    position: relative;
+    top: 200px;
+    width: 200px;
+    height:200px;
+    background-color: aqua;
+}
+.stick{
+    position: relative;
+    top: 200px;
+    left: 100px;
+    height:2px;
+    background-color: aqua;
+}
+
+/*#anime_test{
+    left:200px;
+}*/
+
+</style>
+
+<script>
+    
+
+    function boxclick(){
+        var element = document.getElementById("anime_test");
+        console.log(element);
+        var l1 = element.style.left;
+        console.log(l1);
+        var l2 =parseInt(l1);
+        console.log(l2);
+        l2 += 2;
+        console.log(l2);
+        l2 = l2 +"px";
+        console.log(l2);
+        element.style.left = l2;
+    }
+
+    function stickclick(){
+        var stick = document.getElementById("anime");
+        var long = parseInt(stick.style.width);
+        for(i=0;i<=100;i++){
+            long += 1;
+            var deflong = long+"px";
+            stick.style.width = deflong;
+            console.log(deflong);
+            sleep(100);
+        }
+    }
+
+    function sleep(time){
+        var nowtime =new Date();
+        while(new Date()-nowtime <time);
+    }
+
+    function number(){
+        var i = document.getElementById("number").innerHTML;
+        console.log (i);
+        i++;
+        document.getElementById("number").innerHTML = i;
+    }
+</script>
