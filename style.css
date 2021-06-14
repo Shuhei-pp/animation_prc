@@ -1,0 +1,37 @@
+body{
+    position:absolute; 
+}
+
+.box{
+    position: relative;
+    top: 200px;
+    width: 200px;
+    height:200px;
+    background-color: aqua;
+}
+
+.stick{
+    position: relative;
+    background-color: aqua;
+}
+
+.stick1{
+    top: 200px;
+    left: 100px;
+    height:2px;
+}
+
+.stick2{
+    top:200px;
+    left: 500px;
+    width: 2px;
+}
+
+.stick3{
+    height:2px;
+    top:200px;
+}
+
+/*#anime_test{
+    left:200px;
+}*/
